@@ -28,9 +28,11 @@
                         }
                         break;
                     case "--encrypt":
+                    case "-en":
                         encrypt = true;
                         break;
                     case "--decrypt":
+                    case "-de":
                         decrypt = true;
                         break;
                     case "--help":
