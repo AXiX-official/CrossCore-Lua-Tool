@@ -18,17 +18,17 @@ public class ABCustom
             int j = i + arrEncyptVal;
             if (j >= len) { break; }
 
-            char a = strArr[i];
-            strArr[i] = strArr[j];
-            strArr[j] = a;
-            ///Debug.LogError(string.Format("{0}:{1}=>{2}:{3}",i,strArr[j],j,strArr[i]));
+            (strArr[i], strArr[j]) = (strArr[j], strArr[i]);
             i = j + 1;
         }
         str = new string(strArr);
         return str;
     }
+
     public byte[] bytes;
+    
     string abPath = "";
+    
     public static void DdooEennccyypptt(ref byte[] targetData)
     {
         byte key = (byte)(targetData.Length % 254 + 1);// keys[targetData.Length % keys.Length];

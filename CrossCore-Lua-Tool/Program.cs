@@ -8,6 +8,7 @@
             string outfile = "";
             bool encrypt = false;
             bool decrypt = false;
+            bool fix = true;
 
             for (int i = 0; i < args.Length; i++)
             {
@@ -35,6 +36,9 @@
                     case "-de":
                         decrypt = true;
                         break;
+                    case "--nofix":
+                        fix = false;
+                        break;
                     case "--help":
                     case "-h":
                         Console.WriteLine("Usage: --rawfile <rawfile> --outfile <outfile> [--encrypt] [--decrypt]");
@@ -53,11 +57,11 @@
 
             if (encrypt)
             {
-                AssetBundle.GenEncryptABData(rawfile, outfile);
+                LuaScripts.GenEncryptABData(rawfile, outfile, fix);
             }
             else if (decrypt)
             {
-                AssetBundle.GenDecryptABData(rawfile, outfile);
+                LuaScripts.GenDecryptABData(rawfile, outfile);
             }
         }
     }
