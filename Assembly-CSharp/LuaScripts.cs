@@ -20,7 +20,7 @@ public class LuaScripts
                 }
                 else
                 {
-                    long len = task.Result;
+                    long len = task.Result - 153;
                     Console.WriteLine("Lua file size should be: " + len);
                     if (rawBytes.Length <= len)
                     {
