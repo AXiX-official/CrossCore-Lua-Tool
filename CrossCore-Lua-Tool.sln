@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCore-Lua-Tool", "CrossCore-Lua-Tool\CrossCore-Lua-Tool.csproj", "{3252704A-1A0D-44D9-A361-9B6147B87D63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp\Assembly-CSharp.csproj", "{29C02DD9-EE2A-4D38-90CA-E9524C4BE86A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3252704A-1A0D-44D9-A361-9B6147B87D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3252704A-1A0D-44D9-A361-9B6147B87D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3252704A-1A0D-44D9-A361-9B6147B87D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3252704A-1A0D-44D9-A361-9B6147B87D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C02DD9-EE2A-4D38-90CA-E9524C4BE86A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C02DD9-EE2A-4D38-90CA-E9524C4BE86A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C02DD9-EE2A-4D38-90CA-E9524C4BE86A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C02DD9-EE2A-4D38-90CA-E9524C4BE86A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
