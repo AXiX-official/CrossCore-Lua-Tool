@@ -25,7 +25,7 @@ public class AssetBundle
             fs.Seek(152, SeekOrigin.Begin); // Skip the first 152 bytes
             using (BinaryReader br = new BinaryReader(fs))
             {
-                bytes = br.ReadBytes((int)(fs.Length - 152));
+                bytes = br.ReadBytes((int)(fs.Length - 152 - 1));
             }
         }
         ABCustom.DdooEennccyypptt(ref bytes);
