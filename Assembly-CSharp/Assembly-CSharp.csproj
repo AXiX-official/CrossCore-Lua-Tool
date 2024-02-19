@@ -10,4 +10,8 @@
         <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Remove="TypeTreeNode.cs" />
+    </ItemGroup>
+
 </Project>
