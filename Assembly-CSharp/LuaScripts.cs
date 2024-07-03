@@ -2,13 +2,13 @@
 
 public class LuaScripts
 {
-    public static void GenEncryptABData(string rawfile, string outfile, bool fix = true)
+    public static void GenEncryptABData(string rawfile, string outfile, bool isAndroid, bool fix = true)
     {
         ABCustom abCustom = new ABCustom();
         byte[] rawBytes = File.ReadAllBytes(rawfile);
         if (fix)
         {
-            string luaFileURL = "https://cdn.megagamelog.com/cross/release/android/curr/Custom/luascripts";
+            string luaFileURL = isAndroid ? "https://cdn.megagamelog.com/cross/release/android/curr/Custom/luascripts" : "https://cdn.megagamelog.com/cross/release/ios/curr/Custom/luascripts";
             var wwwMgr = new WWWMgr();
             var tcs = new TaskCompletionSource<bool>();
             wwwMgr.GetFileSizeAsync(luaFileURL).ContinueWith(task =>

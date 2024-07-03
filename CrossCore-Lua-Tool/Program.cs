@@ -15,6 +15,9 @@ namespace CrossCore
 
         [Option('d', "decrypt", Default = false, HelpText = "Decrypt the lua file.")]
         public bool Decrypt { get; set; }
+        
+        [Option('p', "platform", Default = "Android", HelpText = "Platform(Android/iOS).")]
+        public string Platform { get; set; }
 
         [Option("nofix", Default = false, HelpText = "Do not fix the file.")]
         public bool NoFix { get; set; }
@@ -35,7 +38,18 @@ namespace CrossCore
                 {
                     if (o.Encrypt)
                     {
-                        LuaScripts.GenEncryptABData(o.InFile, o.OutFile, !o.NoFix);
+                        string platform = o.Platform.ToLower(); 
+                        switch (platform)
+                        {
+                            case "android":
+                                LuaScripts.GenEncryptABData(o.InFile, o.OutFile, true, !o.NoFix);
+                                break;
+                            case "ios":
+                                LuaScripts.GenEncryptABData(o.InFile, o.OutFile, false, !o.NoFix);
+                                break;
+                            default:
+                                throw new Exception($"Invalid platform: {o.Platform}");
+                        }
                     }
                     else if (o.Decrypt)
                     {

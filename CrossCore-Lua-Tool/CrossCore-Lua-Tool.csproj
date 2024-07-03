@@ -6,12 +6,23 @@
         <RootNamespace>CrossCore_Lua_Tool</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Copyright>Copyright (C) 2024 AXiX</Copyright>
+        <Authors>$(Copyright)</Authors>
+        <Company />
+        <Title>$(AssemblyName)</Title>
+        <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+        <Version>1.0.1</Version>
         <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
         <PublishTrimmed>true</PublishTrimmed>
         <PublishReadyToRun>true</PublishReadyToRun>
         <PublishSingleFile>true</PublishSingleFile>
         <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
     </PropertyGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="..\LICENSE" />
+        <EmbeddedResource Include="..\README.md" />
+    </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Assembly-CSharp\Assembly-CSharp.csproj" />
