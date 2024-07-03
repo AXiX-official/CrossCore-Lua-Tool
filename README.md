@@ -18,3 +18,7 @@ Example usage:
 ```bash
 ./crosscore-lua-tool --infile ./path/to/infile --outfile ./path/to/outfile --encrypt
 ```
+
+## Python Version
+
+查看[pyScripts](https://github.com/AXiX-official/CrossCore-Lua-Tool/tree/pyScripts)分支
