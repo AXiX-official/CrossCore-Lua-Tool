@@ -27,11 +27,11 @@ def encrypt(source: str, target: str, platform: str) -> None:
     if length + 153 > target_size:
         raise ValueError(f'The size of the source file is too large, the maximum size is {target_size} but the source file size is {length}')
     elif length + 153 < target_size:
-        data.extend(b'\x00' * (target_size - length - 152))
+        data.extend(b'\x00' * (target_size - length - 153))
     l = (target_size - 152) // 100
     p = 0
     a = ((target_size - 152) % 254) 
-    while p < length:
+    while p < target_size - 152:
         v = data[p]
         data[p] = v ^ a
         a = (data[p] + v) % 256
