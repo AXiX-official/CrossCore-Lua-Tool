@@ -31,7 +31,7 @@ def encrypt(source: str, target: str, platform: str) -> None:
     l = (target_size - 152) // 100
     p = 0
     a = ((target_size - 152) % 254) 
-    while p < target_size - 152:
+    while p < target_size - 152 - 1:
         v = data[p]
         data[p] = v ^ a
         a = (data[p] + v) % 256
